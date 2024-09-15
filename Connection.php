@@ -32,7 +32,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     logMessage("Received POST request: " . print_r($_POST, true));
     $debug_info['post_data'] = $_POST;
 
-    if (isset($_POST['name']) && isset($_POST['category']) && isset($_POST['price']) && isset($_POST['quantity'])) {
+    if (isset($_POST['edit']) && isset($_POST['id'])) {
+        logMessage("Editing item with ID: " . $_POST['id']);
+        // Fetch item for editing
+        $id = intval($_POST['id']);
+        $stmt = $conn->prepare("SELECT * FROM stock WHERE ID = ?");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if ($result->num_rows > 0) {
+            $item = $result->fetch_assoc();
+            $response['item'] = $item;  // Make sure this line is present
+            $message = "Item fetched for editing.";
+            logMessage("Item fetched: " . print_r($item, true));
+        } else {
+            $message = "Item not found.";
+            logMessage("Item not found for ID: " . $id);
+        }
+        $stmt->close();
+    } elseif (isset($_POST['name']) && isset($_POST['category']) && isset($_POST['price']) && isset($_POST['quantity'])) {
         // Add or update item
         $name = trim($_POST['name']);
         $category = trim($_POST['category']);
@@ -149,12 +167,10 @@ $conn->close();
 
 // Send JSON response
 header('Content-Type: application/json');
-$response = [
-    'message' => $message,
-    'inventory_table' => $table_html,
-    'lowStockItems' => $lowStockItems,
-    'debug_info' => $debug_info
-];
+$response['message'] = $message;
+$response['inventory_table'] = $table_html;
+$response['lowStockItems'] = $lowStockItems;
+$response['debug_info'] = $debug_info;
 echo json_encode($response);
 logMessage("Sent response: " . print_r($response, true));
 exit;

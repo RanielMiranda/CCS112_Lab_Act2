@@ -2051,3 +2051,1551 @@
 
 )
 
+[2024-09-15 22:12:24] Received POST request: Array
+(
+)
+
+[2024-09-15 22:12:24] Sent response: Array
+(
+    [message] => 
+    [inventory_table] => <table class="inventory-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td>5</td>
+            <td>Chillax Vista 15000</td>
+            <td>Disposable Pods</td>
+            <td>$650.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(5)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(5)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>8</td>
+            <td>Demon Vape</td>
+            <td>Disposable Vape</td>
+            <td>$500.00</td>
+            <td>20</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(8)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(8)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>9</td>
+            <td>Shift</td>
+            <td>Disposable Vape</td>
+            <td>$550.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(9)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(9)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>10</td>
+            <td>X Vape</td>
+            <td>Disposable Vape</td>
+            <td>$700.00</td>
+            <td>40</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(10)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(10)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>11</td>
+            <td>Mosmo Sticks</td>
+            <td>Disposable Vape</td>
+            <td>$400.00</td>
+            <td>30</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(11)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(11)'>Delete</button>
+            </td>
+        </tr></tbody></table>
+    [lowStockItems] => Array
+        (
+        )
+
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2024-09-15 22:12:25] Received POST request: Array
+(
+    [search] => true
+    [search_name] => 5
+)
+
+[2024-09-15 22:12:25] Sent response: Array
+(
+    [message] => Search results found.
+    [inventory_table] => <table class="inventory-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td>5</td>
+            <td>Chillax Vista 15000</td>
+            <td>Disposable Pods</td>
+            <td>$650.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(5)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(5)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>8</td>
+            <td>Demon Vape</td>
+            <td>Disposable Vape</td>
+            <td>$500.00</td>
+            <td>20</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(8)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(8)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>9</td>
+            <td>Shift</td>
+            <td>Disposable Vape</td>
+            <td>$550.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(9)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(9)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>10</td>
+            <td>X Vape</td>
+            <td>Disposable Vape</td>
+            <td>$700.00</td>
+            <td>40</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(10)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(10)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>11</td>
+            <td>Mosmo Sticks</td>
+            <td>Disposable Vape</td>
+            <td>$400.00</td>
+            <td>30</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(11)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(11)'>Delete</button>
+            </td>
+        </tr></tbody></table>
+    [lowStockItems] => Array
+        (
+        )
+
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                    [search] => true
+                    [search_name] => 5
+                )
+
+        )
+
+)
+
+[2024-09-15 22:12:26] Received POST request: Array
+(
+    [search] => true
+    [search_name] => 5
+)
+
+[2024-09-15 22:12:26] Sent response: Array
+(
+    [message] => Search results found.
+    [inventory_table] => <table class="inventory-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td>5</td>
+            <td>Chillax Vista 15000</td>
+            <td>Disposable Pods</td>
+            <td>$650.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(5)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(5)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>8</td>
+            <td>Demon Vape</td>
+            <td>Disposable Vape</td>
+            <td>$500.00</td>
+            <td>20</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(8)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(8)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>9</td>
+            <td>Shift</td>
+            <td>Disposable Vape</td>
+            <td>$550.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(9)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(9)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>10</td>
+            <td>X Vape</td>
+            <td>Disposable Vape</td>
+            <td>$700.00</td>
+            <td>40</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(10)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(10)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>11</td>
+            <td>Mosmo Sticks</td>
+            <td>Disposable Vape</td>
+            <td>$400.00</td>
+            <td>30</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(11)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(11)'>Delete</button>
+            </td>
+        </tr></tbody></table>
+    [lowStockItems] => Array
+        (
+        )
+
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                    [search] => true
+                    [search_name] => 5
+                )
+
+        )
+
+)
+
+[2024-09-15 22:12:26] Received POST request: Array
+(
+    [search] => true
+    [search_name] => 5
+)
+
+[2024-09-15 22:12:26] Sent response: Array
+(
+    [message] => Search results found.
+    [inventory_table] => <table class="inventory-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td>5</td>
+            <td>Chillax Vista 15000</td>
+            <td>Disposable Pods</td>
+            <td>$650.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(5)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(5)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>8</td>
+            <td>Demon Vape</td>
+            <td>Disposable Vape</td>
+            <td>$500.00</td>
+            <td>20</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(8)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(8)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>9</td>
+            <td>Shift</td>
+            <td>Disposable Vape</td>
+            <td>$550.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(9)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(9)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>10</td>
+            <td>X Vape</td>
+            <td>Disposable Vape</td>
+            <td>$700.00</td>
+            <td>40</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(10)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(10)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>11</td>
+            <td>Mosmo Sticks</td>
+            <td>Disposable Vape</td>
+            <td>$400.00</td>
+            <td>30</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(11)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(11)'>Delete</button>
+            </td>
+        </tr></tbody></table>
+    [lowStockItems] => Array
+        (
+        )
+
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                    [search] => true
+                    [search_name] => 5
+                )
+
+        )
+
+)
+
+[2024-09-15 22:15:50] Received POST request: Array
+(
+)
+
+[2024-09-15 22:15:50] Sent response: Array
+(
+    [message] => 
+    [inventory_table] => <table class="inventory-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td>5</td>
+            <td>Chillax Vista 15000</td>
+            <td>Disposable Pods</td>
+            <td>$650.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(5)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(5)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>8</td>
+            <td>Demon Vape</td>
+            <td>Disposable Vape</td>
+            <td>$500.00</td>
+            <td>20</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(8)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(8)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>9</td>
+            <td>Shift</td>
+            <td>Disposable Vape</td>
+            <td>$550.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(9)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(9)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>10</td>
+            <td>X Vape</td>
+            <td>Disposable Vape</td>
+            <td>$700.00</td>
+            <td>40</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(10)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(10)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>11</td>
+            <td>Mosmo Sticks</td>
+            <td>Disposable Vape</td>
+            <td>$400.00</td>
+            <td>30</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(11)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(11)'>Delete</button>
+            </td>
+        </tr></tbody></table>
+    [lowStockItems] => Array
+        (
+        )
+
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2024-09-15 22:15:51] Received POST request: Array
+(
+    [edit] => true
+    [id] => 5
+)
+
+[2024-09-15 22:15:51] Sent response: Array
+(
+    [message] => Item fetched for editing.
+    [inventory_table] => <table class="inventory-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td>5</td>
+            <td>Chillax Vista 15000</td>
+            <td>Disposable Pods</td>
+            <td>$650.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(5)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(5)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>8</td>
+            <td>Demon Vape</td>
+            <td>Disposable Vape</td>
+            <td>$500.00</td>
+            <td>20</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(8)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(8)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>9</td>
+            <td>Shift</td>
+            <td>Disposable Vape</td>
+            <td>$550.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(9)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(9)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>10</td>
+            <td>X Vape</td>
+            <td>Disposable Vape</td>
+            <td>$700.00</td>
+            <td>40</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(10)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(10)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>11</td>
+            <td>Mosmo Sticks</td>
+            <td>Disposable Vape</td>
+            <td>$400.00</td>
+            <td>30</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(11)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(11)'>Delete</button>
+            </td>
+        </tr></tbody></table>
+    [lowStockItems] => Array
+        (
+        )
+
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                    [edit] => true
+                    [id] => 5
+                )
+
+        )
+
+)
+
+[2024-09-15 22:15:52] Received POST request: Array
+(
+    [edit] => true
+    [id] => 5
+)
+
+[2024-09-15 22:15:52] Sent response: Array
+(
+    [message] => Item fetched for editing.
+    [inventory_table] => <table class="inventory-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td>5</td>
+            <td>Chillax Vista 15000</td>
+            <td>Disposable Pods</td>
+            <td>$650.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(5)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(5)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>8</td>
+            <td>Demon Vape</td>
+            <td>Disposable Vape</td>
+            <td>$500.00</td>
+            <td>20</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(8)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(8)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>9</td>
+            <td>Shift</td>
+            <td>Disposable Vape</td>
+            <td>$550.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(9)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(9)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>10</td>
+            <td>X Vape</td>
+            <td>Disposable Vape</td>
+            <td>$700.00</td>
+            <td>40</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(10)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(10)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>11</td>
+            <td>Mosmo Sticks</td>
+            <td>Disposable Vape</td>
+            <td>$400.00</td>
+            <td>30</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(11)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(11)'>Delete</button>
+            </td>
+        </tr></tbody></table>
+    [lowStockItems] => Array
+        (
+        )
+
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                    [edit] => true
+                    [id] => 5
+                )
+
+        )
+
+)
+
+[2024-09-15 22:15:52] Received POST request: Array
+(
+    [edit] => true
+    [id] => 5
+)
+
+[2024-09-15 22:15:52] Sent response: Array
+(
+    [message] => Item fetched for editing.
+    [inventory_table] => <table class="inventory-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td>5</td>
+            <td>Chillax Vista 15000</td>
+            <td>Disposable Pods</td>
+            <td>$650.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(5)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(5)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>8</td>
+            <td>Demon Vape</td>
+            <td>Disposable Vape</td>
+            <td>$500.00</td>
+            <td>20</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(8)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(8)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>9</td>
+            <td>Shift</td>
+            <td>Disposable Vape</td>
+            <td>$550.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(9)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(9)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>10</td>
+            <td>X Vape</td>
+            <td>Disposable Vape</td>
+            <td>$700.00</td>
+            <td>40</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(10)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(10)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>11</td>
+            <td>Mosmo Sticks</td>
+            <td>Disposable Vape</td>
+            <td>$400.00</td>
+            <td>30</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(11)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(11)'>Delete</button>
+            </td>
+        </tr></tbody></table>
+    [lowStockItems] => Array
+        (
+        )
+
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                    [edit] => true
+                    [id] => 5
+                )
+
+        )
+
+)
+
+[2024-09-15 22:15:56] Received POST request: Array
+(
+    [edit] => true
+    [id] => 5
+)
+
+[2024-09-15 22:15:56] Sent response: Array
+(
+    [message] => Item fetched for editing.
+    [inventory_table] => <table class="inventory-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td>5</td>
+            <td>Chillax Vista 15000</td>
+            <td>Disposable Pods</td>
+            <td>$650.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(5)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(5)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>8</td>
+            <td>Demon Vape</td>
+            <td>Disposable Vape</td>
+            <td>$500.00</td>
+            <td>20</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(8)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(8)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>9</td>
+            <td>Shift</td>
+            <td>Disposable Vape</td>
+            <td>$550.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(9)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(9)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>10</td>
+            <td>X Vape</td>
+            <td>Disposable Vape</td>
+            <td>$700.00</td>
+            <td>40</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(10)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(10)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>11</td>
+            <td>Mosmo Sticks</td>
+            <td>Disposable Vape</td>
+            <td>$400.00</td>
+            <td>30</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(11)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(11)'>Delete</button>
+            </td>
+        </tr></tbody></table>
+    [lowStockItems] => Array
+        (
+        )
+
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                    [edit] => true
+                    [id] => 5
+                )
+
+        )
+
+)
+
+[2024-09-15 22:16:42] Received POST request: Array
+(
+)
+
+[2024-09-15 22:16:42] Sent response: Array
+(
+    [message] => 
+    [inventory_table] => <table class="inventory-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td>5</td>
+            <td>Chillax Vista 15000</td>
+            <td>Disposable Pods</td>
+            <td>$650.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(5)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(5)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>8</td>
+            <td>Demon Vape</td>
+            <td>Disposable Vape</td>
+            <td>$500.00</td>
+            <td>20</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(8)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(8)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>9</td>
+            <td>Shift</td>
+            <td>Disposable Vape</td>
+            <td>$550.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(9)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(9)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>10</td>
+            <td>X Vape</td>
+            <td>Disposable Vape</td>
+            <td>$700.00</td>
+            <td>40</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(10)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(10)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>11</td>
+            <td>Mosmo Sticks</td>
+            <td>Disposable Vape</td>
+            <td>$400.00</td>
+            <td>30</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(11)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(11)'>Delete</button>
+            </td>
+        </tr></tbody></table>
+    [lowStockItems] => Array
+        (
+        )
+
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2024-09-15 22:16:44] Received POST request: Array
+(
+    [edit] => true
+    [id] => 5
+)
+
+[2024-09-15 22:16:44] Editing item with ID: 5
+[2024-09-15 22:16:44] Item fetched: Array
+(
+    [ID] => 5
+    [Name] => Chillax Vista 15000
+    [Category] => Disposable Pods
+    [Price] => 650
+    [Quantity] => 50
+)
+
+[2024-09-15 22:16:44] Sent response: Array
+(
+    [message] => Item fetched for editing.
+    [inventory_table] => <table class="inventory-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td>5</td>
+            <td>Chillax Vista 15000</td>
+            <td>Disposable Pods</td>
+            <td>$650.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(5)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(5)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>8</td>
+            <td>Demon Vape</td>
+            <td>Disposable Vape</td>
+            <td>$500.00</td>
+            <td>20</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(8)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(8)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>9</td>
+            <td>Shift</td>
+            <td>Disposable Vape</td>
+            <td>$550.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(9)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(9)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>10</td>
+            <td>X Vape</td>
+            <td>Disposable Vape</td>
+            <td>$700.00</td>
+            <td>40</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(10)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(10)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>11</td>
+            <td>Mosmo Sticks</td>
+            <td>Disposable Vape</td>
+            <td>$400.00</td>
+            <td>30</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(11)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(11)'>Delete</button>
+            </td>
+        </tr></tbody></table>
+    [lowStockItems] => Array
+        (
+        )
+
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                    [edit] => true
+                    [id] => 5
+                )
+
+        )
+
+)
+
+[2024-09-15 22:19:29] Received POST request: Array
+(
+)
+
+[2024-09-15 22:19:29] Sent response: Array
+(
+    [message] => 
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2024-09-15 22:19:31] Received POST request: Array
+(
+)
+
+[2024-09-15 22:19:31] Sent response: Array
+(
+    [message] => 
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2024-09-15 22:19:54] Received POST request: Array
+(
+    [id] => 
+    [name] => Orion Vape
+    [category] => Disposable Vape
+    [price] => 300
+    [quantity] => 10
+)
+
+[2024-09-15 22:19:54] Sent response: Array
+(
+    [message] => Item added successfully.
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                    [id] => 
+                    [name] => Orion Vape
+                    [category] => Disposable Vape
+                    [price] => 300
+                    [quantity] => 10
+                )
+
+        )
+
+)
+
+[2024-09-15 22:19:55] Received POST request: Array
+(
+)
+
+[2024-09-15 22:19:55] Sent response: Array
+(
+    [message] => 
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2024-09-15 22:21:06] Received POST request: Array
+(
+)
+
+[2024-09-15 22:21:06] Sent response: Array
+(
+    [message] => 
+    [inventory_table] => <table class="inventory-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td>5</td>
+            <td>Chillax Vista 15000</td>
+            <td>Disposable Pods</td>
+            <td>$650.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(5)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(5)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>8</td>
+            <td>Demon Vape</td>
+            <td>Disposable Vape</td>
+            <td>$500.00</td>
+            <td>20</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(8)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(8)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>9</td>
+            <td>Shift</td>
+            <td>Disposable Vape</td>
+            <td>$550.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(9)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(9)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>10</td>
+            <td>X Vape</td>
+            <td>Disposable Vape</td>
+            <td>$700.00</td>
+            <td>40</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(10)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(10)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>11</td>
+            <td>Mosmo Sticks</td>
+            <td>Disposable Vape</td>
+            <td>$400.00</td>
+            <td>30</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(11)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(11)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>12</td>
+            <td>Orion Vape</td>
+            <td>Disposable Vape</td>
+            <td>$300.00</td>
+            <td>10</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(12)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(12)'>Delete</button>
+            </td>
+        </tr></tbody></table>
+    [lowStockItems] => Array
+        (
+        )
+
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2024-09-15 22:21:10] Received POST request: Array
+(
+    [edit] => true
+    [id] => 5
+)
+
+[2024-09-15 22:21:10] Editing item with ID: 5
+[2024-09-15 22:21:10] Item fetched: Array
+(
+    [ID] => 5
+    [Name] => Chillax Vista 15000
+    [Category] => Disposable Pods
+    [Price] => 650
+    [Quantity] => 50
+)
+
+[2024-09-15 22:21:10] Sent response: Array
+(
+    [item] => Array
+        (
+            [ID] => 5
+            [Name] => Chillax Vista 15000
+            [Category] => Disposable Pods
+            [Price] => 650
+            [Quantity] => 50
+        )
+
+    [message] => Item fetched for editing.
+    [inventory_table] => <table class="inventory-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td>5</td>
+            <td>Chillax Vista 15000</td>
+            <td>Disposable Pods</td>
+            <td>$650.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(5)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(5)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>8</td>
+            <td>Demon Vape</td>
+            <td>Disposable Vape</td>
+            <td>$500.00</td>
+            <td>20</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(8)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(8)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>9</td>
+            <td>Shift</td>
+            <td>Disposable Vape</td>
+            <td>$550.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(9)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(9)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>10</td>
+            <td>X Vape</td>
+            <td>Disposable Vape</td>
+            <td>$700.00</td>
+            <td>40</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(10)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(10)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>11</td>
+            <td>Mosmo Sticks</td>
+            <td>Disposable Vape</td>
+            <td>$400.00</td>
+            <td>30</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(11)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(11)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>12</td>
+            <td>Orion Vape</td>
+            <td>Disposable Vape</td>
+            <td>$300.00</td>
+            <td>10</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(12)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(12)'>Delete</button>
+            </td>
+        </tr></tbody></table>
+    [lowStockItems] => Array
+        (
+        )
+
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                    [edit] => true
+                    [id] => 5
+                )
+
+        )
+
+)
+
+[2024-09-15 22:21:13] Received POST request: Array
+(
+    [id] => 5
+    [name] => Chillax Vista 15000
+    [category] => Disposable Pods
+    [price] => 650
+    [quantity] => 20
+)
+
+[2024-09-15 22:21:13] Sent response: Array
+(
+    [message] => Item updated successfully.
+    [inventory_table] => <table class="inventory-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td>5</td>
+            <td>Chillax Vista 15000</td>
+            <td>Disposable Pods</td>
+            <td>$650.00</td>
+            <td>20</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(5)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(5)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>8</td>
+            <td>Demon Vape</td>
+            <td>Disposable Vape</td>
+            <td>$500.00</td>
+            <td>20</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(8)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(8)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>9</td>
+            <td>Shift</td>
+            <td>Disposable Vape</td>
+            <td>$550.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(9)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(9)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>10</td>
+            <td>X Vape</td>
+            <td>Disposable Vape</td>
+            <td>$700.00</td>
+            <td>40</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(10)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(10)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>11</td>
+            <td>Mosmo Sticks</td>
+            <td>Disposable Vape</td>
+            <td>$400.00</td>
+            <td>30</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(11)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(11)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>12</td>
+            <td>Orion Vape</td>
+            <td>Disposable Vape</td>
+            <td>$300.00</td>
+            <td>10</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(12)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(12)'>Delete</button>
+            </td>
+        </tr></tbody></table>
+    [lowStockItems] => Array
+        (
+        )
+
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                    [id] => 5
+                    [name] => Chillax Vista 15000
+                    [category] => Disposable Pods
+                    [price] => 650
+                    [quantity] => 20
+                )
+
+        )
+
+)
+
+[2024-09-15 22:21:15] Received POST request: Array
+(
+)
+
+[2024-09-15 22:21:15] Sent response: Array
+(
+    [message] => 
+    [inventory_table] => <table class="inventory-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td>5</td>
+            <td>Chillax Vista 15000</td>
+            <td>Disposable Pods</td>
+            <td>$650.00</td>
+            <td>20</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(5)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(5)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>8</td>
+            <td>Demon Vape</td>
+            <td>Disposable Vape</td>
+            <td>$500.00</td>
+            <td>20</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(8)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(8)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>9</td>
+            <td>Shift</td>
+            <td>Disposable Vape</td>
+            <td>$550.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(9)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(9)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>10</td>
+            <td>X Vape</td>
+            <td>Disposable Vape</td>
+            <td>$700.00</td>
+            <td>40</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(10)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(10)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>11</td>
+            <td>Mosmo Sticks</td>
+            <td>Disposable Vape</td>
+            <td>$400.00</td>
+            <td>30</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(11)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(11)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>12</td>
+            <td>Orion Vape</td>
+            <td>Disposable Vape</td>
+            <td>$300.00</td>
+            <td>10</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(12)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(12)'>Delete</button>
+            </td>
+        </tr></tbody></table>
+    [lowStockItems] => Array
+        (
+        )
+
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2024-09-15 22:21:20] Received POST request: Array
+(
+    [search_name] => chillax
+    [search] => Search
+)
+
+[2024-09-15 22:21:20] Sent response: Array
+(
+    [search_results] => Array
+        (
+            [0] => Array
+                (
+                    [ID] => 5
+                    [Name] => Chillax Vista 15000
+                    [Category] => Disposable Pods
+                    [Price] => 650
+                    [Quantity] => 20
+                )
+
+        )
+
+    [message] => Search results found.
+    [inventory_table] => <table class="inventory-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td>5</td>
+            <td>Chillax Vista 15000</td>
+            <td>Disposable Pods</td>
+            <td>$650.00</td>
+            <td>20</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(5)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(5)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>8</td>
+            <td>Demon Vape</td>
+            <td>Disposable Vape</td>
+            <td>$500.00</td>
+            <td>20</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(8)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(8)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>9</td>
+            <td>Shift</td>
+            <td>Disposable Vape</td>
+            <td>$550.00</td>
+            <td>50</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(9)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(9)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>10</td>
+            <td>X Vape</td>
+            <td>Disposable Vape</td>
+            <td>$700.00</td>
+            <td>40</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(10)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(10)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>11</td>
+            <td>Mosmo Sticks</td>
+            <td>Disposable Vape</td>
+            <td>$400.00</td>
+            <td>30</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(11)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(11)'>Delete</button>
+            </td>
+        </tr><tr>
+            <td>12</td>
+            <td>Orion Vape</td>
+            <td>Disposable Vape</td>
+            <td>$300.00</td>
+            <td>10</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(12)'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(12)'>Delete</button>
+            </td>
+        </tr></tbody></table>
+    [lowStockItems] => Array
+        (
+        )
+
+    [debug_info] => Array
+        (
+            [post_data] => Array
+                (
+                    [search_name] => chillax
+                    [search] => Search
+                )
+
+        )
+
+)
+

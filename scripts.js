@@ -7,26 +7,49 @@ function showLowStockAlerts() {
 }
 
 function editItem(id) {
+    console.log('Editing item with ID:', id);
     fetch('Connection.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: `search=true&search_name=${id}`
+        body: `edit=true&id=${id}`
     })
-    .then(response => response.json())
+    .then(response => {
+        console.log('Raw response:', response);
+        return response.json();
+    })
     .then(data => {
-        if (data.search_results && data.search_results.length > 0) {
-            const item = data.search_results[0];
+        console.log('Parsed data:', data);
+        if (data.item) {
+            const item = data.item;
+            console.log('Item data:', item);
             document.getElementById('itemId').value = item.ID;
             document.getElementById('name').value = item.Name;
             document.getElementById('category').value = item.Category;
             document.getElementById('price').value = item.Price;
             document.getElementById('quantity').value = item.Quantity;
             document.getElementById('submitBtn').value = 'Update Item';
+        } else {
+            console.error('No item data received');
+            console.log('Full response:', data);
+        }
+        
+        // Update the inventory table
+        if (data.inventory_table) {
+            document.getElementById('inventory-table').innerHTML = data.inventory_table;
+        }
+        
+        // Handle low stock items
+        if (data.lowStockItems) {
+            lowStockItems = data.lowStockItems;
+            showLowStockAlerts();
         }
     })
-    .catch(error => console.error('Error:', error));
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while fetching the item data. Please try again.');
+    });
 }
 
 function deleteItem(id) {
