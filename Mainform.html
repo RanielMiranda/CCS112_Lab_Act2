@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Inventory Management System</h1>
+        <div class="content">
+            <div class="left-column">
+                <h2>Add/Edit Item</h2>
+                <form id="itemForm" method="post">
+                    <input type="hidden" id="itemId" name="id">
+                    <label for="name">Product Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="category">Category:</label>
+                    <input type="text" id="category" name="category" required>
+                    
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" name="price" step="0.01" required>
+                    
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" required>
+                    
+                    <input type="submit" id="submitBtn" name="action" value="Add Item">
+                </form>
+
+                <h2>Search Item</h2>
+                <form method="post" action="Connection.php" name="search">
+                    <label for="search_name">Search Product Name:</label>
+                    <input type="text" id="search_name" name="search_name" required>
+                    <input type="submit" name="search" value="Search">
+                </form>
+
+                <div id="search-result">
+                    <!-- Search results will be displayed here -->
+                </div>
+            </div>
+
+            <div class="right-column">
+                <h2>Current Inventory</h2>
+                <div id="inventory-table">
+                    <!-- Table will be populated by PHP -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
