@@ -91,7 +91,9 @@ function updateInventory() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const itemForm = document.getElementById('itemForm');
+    const searchForm = document.getElementById('searchForm');
     const inventoryTable = document.getElementById('inventory-table');
+    const searchResult = document.getElementById('search-result');
 
     updateInventory();
 
@@ -125,4 +127,62 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('An error occurred. Please try again.');
         });
     });
+
+    searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+
+        fetch('Connection.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Search response:', data);
+            if (data.message) {
+                alert(data.message);
+            }
+            if (data.search_results) {
+                displaySearchResults(data.search_results);
+            }
+            if (data.inventory_table) {
+                inventoryTable.innerHTML = data.inventory_table;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred during the search. Please try again.');
+        });
+    });
 });
+
+function displaySearchResults(results) {
+    const searchResult = document.getElementById('search-result');
+    if (results.length === 0) {
+        searchResult.innerHTML = '<p>No results found.</p>';
+        return;
+    }
+
+    let html = '<table class="inventory-table">';
+    html += '<thead><tr><th>ID</th><th>Name</th><th>Category</th><th>Price</th><th>Quantity</th><th>Actions</th></tr></thead>';
+    html += '<tbody>';
+
+    results.forEach(item => {
+        html += `<tr>
+            <td>${item.ID}</td>
+            <td>${item.Name}</td>
+            <td>${item.Category}</td>
+            <td>$${parseFloat(item.Price).toFixed(2)}</td>
+            <td>${item.Quantity}</td>
+            <td>
+                <button class='edit-btn' onclick='editItem(${item.ID})'>Edit</button>
+                <button class='delete-btn' onclick='deleteItem(${item.ID})'>Delete</button>
+            </td>
+        </tr>`;
+    });
+
+    html += '</tbody></table>';
+    searchResult.innerHTML = html;
+}
+
+// ... (keep other existing functions)

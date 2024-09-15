@@ -31,10 +31,11 @@
                 </form>
 
                 <h2>Search Item</h2>
-                <form method="post" action="Connection.php" name="search">
-                    <label for="search_name">Search Product Name:</label>
-                    <input type="text" id="search_name" name="search_name" required>
-                    <input type="submit" name="search" value="Search">
+                <form id="searchForm">
+                    <div class="search-container">
+                        <input type="text" id="search_name" name="search_name" placeholder="Enter product name" required>
+                        <button type="submit">Search</button>
+                    </div>
                 </form>
 
                 <div id="search-result">

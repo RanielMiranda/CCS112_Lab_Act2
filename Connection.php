@@ -32,7 +32,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     logMessage("Received POST request: " . print_r($_POST, true));
     $debug_info['post_data'] = $_POST;
 
-    if (isset($_POST['edit']) && isset($_POST['id'])) {
+    if (isset($_POST['search_name'])) {
+        // Search operation
+        $search_name = trim($_POST['search_name']);
+        $stmt = $conn->prepare("SELECT * FROM stock WHERE Name LIKE ?");
+        $search_term = "%$search_name%";
+        $stmt->bind_param("s", $search_term);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if ($result->num_rows > 0) {
+            $search_results = [];
+            while ($row = $result->fetch_assoc()) {
+                $search_results[] = $row;
+            }
+            $response['search_results'] = $search_results;
+            $message = "Search results found.";
+        } else {
+            $message = "No products found.";
+        }
+        $stmt->close();
+    } elseif (isset($_POST['edit']) && isset($_POST['id'])) {
         logMessage("Editing item with ID: " . $_POST['id']);
         // Fetch item for editing
         $id = intval($_POST['id']);
@@ -91,25 +110,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $message = "Item deleted successfully.";
         } else {
             $message = "Error deleting item: " . $conn->error;
-        }
-        $stmt->close();
-    } elseif (isset($_POST['search'])) {
-        // Search operation
-        $search_name = trim($_POST['search_name']);
-        $stmt = $conn->prepare("SELECT * FROM stock WHERE Name LIKE ?");
-        $search_term = "%$search_name%";
-        $stmt->bind_param("s", $search_term);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        if ($result->num_rows > 0) {
-            $search_results = [];
-            while ($row = $result->fetch_assoc()) {
-                $search_results[] = $row;
-            }
-            $response['search_results'] = $search_results;
-            $message = "Search results found.";
-        } else {
-            $message = "No products found.";
         }
         $stmt->close();
     }
