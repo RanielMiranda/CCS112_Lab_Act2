@@ -12,12 +12,12 @@ function editItem(id) {
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: `edit=true&id=${id}`
+        body: `search=true&search_name=${id}`
     })
     .then(response => response.json())
     .then(data => {
-        if (data.item) {
-            const item = data.item;
+        if (data.search_results && data.search_results.length > 0) {
+            const item = data.search_results[0];
             document.getElementById('itemId').value = item.ID;
             document.getElementById('name').value = item.Name;
             document.getElementById('category').value = item.Category;
@@ -94,6 +94,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             this.reset();
             document.getElementById('itemId').value = '';
+            document.getElementById('submitBtn').value = 'Add Item';
+            updateInventory();
         })
         .catch(error => {
             console.error('Error:', error);

@@ -32,15 +32,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     logMessage("Received POST request: " . print_r($_POST, true));
     $debug_info['post_data'] = $_POST;
 
-    // Check if it's an add or update operation
     if (isset($_POST['name']) && isset($_POST['category']) && isset($_POST['price']) && isset($_POST['quantity'])) {
+        // Add or update item
         $name = trim($_POST['name']);
         $category = trim($_POST['category']);
         $price = floatval($_POST['price']);
         $quantity = intval($_POST['quantity']);
 
-        if (empty($name) || empty($category) || $price <= 0 || $quantity <= 0) {
-            $message = "Invalid input. All fields are required, price and quantity must be positive.";
+        if (empty($name) || empty($category) || $price <= 0 || $quantity < 0) {
+            $message = "Invalid input. All fields are required, price must be positive, and quantity must be non-negative.";
         } else {
             if (empty($_POST['id'])) {
                 // Add new item
@@ -48,10 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $stmt->bind_param("ssdi", $name, $category, $price, $quantity);
                 if ($stmt->execute()) {
                     $message = "Item added successfully.";
-                    logMessage("Item added: $name, $category, $price, $quantity");
                 } else {
                     $message = "Error adding item: " . $conn->error;
-                    logMessage("Error adding item: " . $conn->error);
                 }
             } else {
                 // Update existing item
@@ -60,10 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $stmt->bind_param("ssdii", $name, $category, $price, $quantity, $id);
                 if ($stmt->execute()) {
                     $message = "Item updated successfully.";
-                    logMessage("Item updated: ID $id, $name, $category, $price, $quantity");
                 } else {
                     $message = "Error updating item: " . $conn->error;
-                    logMessage("Error updating item: " . $conn->error);
                 }
             }
             $stmt->close();
@@ -87,12 +83,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bind_param("s", $search_term);
         $stmt->execute();
         $result = $stmt->get_result();
-
         if ($result->num_rows > 0) {
             $search_results = [];
             while ($row = $result->fetch_assoc()) {
                 $search_results[] = $row;
             }
+            $response['search_results'] = $search_results;
             $message = "Search results found.";
         } else {
             $message = "No products found.";
@@ -156,6 +152,7 @@ header('Content-Type: application/json');
 $response = [
     'message' => $message,
     'inventory_table' => $table_html,
+    'lowStockItems' => $lowStockItems,
     'debug_info' => $debug_info
 ];
 echo json_encode($response);
