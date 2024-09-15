@@ -139,8 +139,10 @@ if ($result->num_rows > 0) {
             <td>$" . number_format($row['Price'], 2) . "</td>
             <td>{$row['Quantity']}</td>
             <td>
-                <button class='edit-btn' onclick='editItem({$row['ID']})'>Edit</button>
-                <button class='delete-btn' onclick='deleteItem({$row['ID']})'>Delete</button>
+                <div class='button-container'>
+                    <button class='edit-btn' onclick='editItem({$row['ID']})'>Edit</button>
+                    <button class='delete-btn' onclick='deleteItem({$row['ID']})'>Delete</button>
+                </div>
             </td>
         </tr>";
     }
