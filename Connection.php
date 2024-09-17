@@ -10,19 +10,11 @@ function logMessage($message) {
     file_put_contents('debug.log', date('[Y-m-d H:i:s] ') . $message . PHP_EOL, FILE_APPEND);
 }
 
-// Database connection parameters
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "lab_act2";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    logMessage("Connection failed: " . $conn->connect_error);
-    die("Connection failed: " . $conn->connect_error);
+// Initialize inventory array if it doesn't exist in the session
+if (!isset($_SESSION['inventory'])) {
+    $_SESSION['inventory'] = [
+        ['ID' => 1, 'Name' => 'Iphone 15', 'Category' => 'Smart Ph', 'Price' => 30.00, 'Quantity' => 20 ],
+    ];
 }
 
 $message = '';
@@ -34,41 +26,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (isset($_POST['search_name'])) {
         // Search operation
-        $search_name = trim($_POST['search_name']);
-        $stmt = $conn->prepare("SELECT * FROM stock WHERE Name LIKE ?");
-        $search_term = "%$search_name%";
-        $stmt->bind_param("s", $search_term);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        if ($result->num_rows > 0) {
-            $search_results = [];
-            while ($row = $result->fetch_assoc()) {
-                $search_results[] = $row;
-            }
-            $response['search_results'] = $search_results;
+        $search_name = strtolower(trim($_POST['search_name']));
+        $search_results = array_filter($_SESSION['inventory'], function($item) use ($search_name) {
+            return strpos(strtolower($item['Name']), $search_name) !== false;
+        });
+        if (!empty($search_results)) {
+            $response['search_results'] = array_values($search_results);
             $message = "Search results found.";
         } else {
             $message = "No products found.";
         }
-        $stmt->close();
     } elseif (isset($_POST['edit']) && isset($_POST['id'])) {
-        logMessage("Editing item with ID: " . $_POST['id']);
         // Fetch item for editing
         $id = intval($_POST['id']);
-        $stmt = $conn->prepare("SELECT * FROM stock WHERE ID = ?");
-        $stmt->bind_param("i", $id);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        if ($result->num_rows > 0) {
-            $item = $result->fetch_assoc();
-            $response['item'] = $item;  // Make sure this line is present
+        $item = array_filter($_SESSION['inventory'], function($item) use ($id) {
+            return $item['ID'] == $id;
+        });
+        if (!empty($item)) {
+            $response['item'] = reset($item);
             $message = "Item fetched for editing.";
-            logMessage("Item fetched: " . print_r($item, true));
         } else {
             $message = "Item not found.";
-            logMessage("Item not found for ID: " . $id);
         }
-        $stmt->close();
     } elseif (isset($_POST['name']) && isset($_POST['category']) && isset($_POST['price']) && isset($_POST['quantity'])) {
         // Add or update item
         $name = trim($_POST['name']);
@@ -81,37 +60,37 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } else {
             if (empty($_POST['id'])) {
                 // Add new item
-                $stmt = $conn->prepare("INSERT INTO stock (Name, Category, Price, Quantity) VALUES (?, ?, ?, ?)");
-                $stmt->bind_param("ssdi", $name, $category, $price, $quantity);
-                if ($stmt->execute()) {
-                    $message = "Item added successfully.";
-                } else {
-                    $message = "Error adding item: " . $conn->error;
-                }
+                $new_id = max(array_column($_SESSION['inventory'], 'ID')) + 1;
+                $_SESSION['inventory'][] = [
+                    'ID' => $new_id,
+                    'Name' => $name,
+                    'Category' => $category,
+                    'Price' => $price,
+                    'Quantity' => $quantity
+                ];
+                $message = "Item added successfully.";
             } else {
                 // Update existing item
                 $id = intval($_POST['id']);
-                $stmt = $conn->prepare("UPDATE stock SET Name=?, Category=?, Price=?, Quantity=? WHERE ID=?");
-                $stmt->bind_param("ssdii", $name, $category, $price, $quantity, $id);
-                if ($stmt->execute()) {
-                    $message = "Item updated successfully.";
-                } else {
-                    $message = "Error updating item: " . $conn->error;
+                foreach ($_SESSION['inventory'] as &$item) {
+                    if ($item['ID'] == $id) {
+                        $item['Name'] = $name;
+                        $item['Category'] = $category;
+                        $item['Price'] = $price;
+                        $item['Quantity'] = $quantity;
+                        break;
+                    }
                 }
+                $message = "Item updated successfully.";
             }
-            $stmt->close();
         }
     } elseif (isset($_POST['delete'])) {
         // Delete operation
         $id = intval($_POST['id']);
-        $stmt = $conn->prepare("DELETE FROM stock WHERE ID=?");
-        $stmt->bind_param("i", $id);
-        if ($stmt->execute()) {
-            $message = "Item deleted successfully.";
-        } else {
-            $message = "Error deleting item: " . $conn->error;
-        }
-        $stmt->close();
+        $_SESSION['inventory'] = array_filter($_SESSION['inventory'], function($item) use ($id) {
+            return $item['ID'] != $id;
+        });
+        $message = "Item deleted successfully.";
     }
 }
 
@@ -129,9 +108,8 @@ $table_html = '<table class="inventory-table">
     </thead>
     <tbody>';
 
-$result = $conn->query("SELECT * FROM stock");
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
+if (!empty($_SESSION['inventory'])) {
+    foreach ($_SESSION['inventory'] as $row) {
         $table_html .= "<tr>
             <td>{$row['ID']}</td>
             <td>{$row['Name']}</td>
@@ -153,25 +131,18 @@ if ($result->num_rows > 0) {
 $table_html .= '</tbody></table>';
 
 // Get low stock items
-$lowStockItems = [];
-$result = $conn->query("SELECT Name, Quantity FROM stock WHERE Quantity < 10");
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        $lowStockItems[] = [
-            'name' => $row['Name'],
-            'quantity' => $row['Quantity']
-        ];
-    }
-}
-
-// Close the database connection
-$conn->close();
+$lowStockItems = array_filter($_SESSION['inventory'], function($item) {
+    return $item['Quantity'] < 10;
+});
+$lowStockItems = array_map(function($item) {
+    return ['name' => $item['Name'], 'quantity' => $item['Quantity']];
+}, $lowStockItems);
 
 // Send JSON response
 header('Content-Type: application/json');
 $response['message'] = $message;
 $response['inventory_table'] = $table_html;
-$response['lowStockItems'] = $lowStockItems;
+$response['lowStockItems'] = array_values($lowStockItems);
 $response['debug_info'] = $debug_info;
 echo json_encode($response);
 logMessage("Sent response: " . print_r($response, true));
